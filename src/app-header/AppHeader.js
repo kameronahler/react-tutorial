@@ -1,13 +1,14 @@
 import React from 'react';
-import logo from '../logo.svg';
 import './AppHeader.scss';
 
 function AppHeader() {
   return (
     <header className="app-header">
-      <img src={logo} className="app-logo" alt="logo" />
+      <img src="https://static.tvmaze.com/uploads/images/medium_portrait/252/632123.jpg"
+        className="app-logo"
+        alt="logo" />
       <p>
-        Edit <code>src/App.js</code> and save to reload.
+        Look, Ma, no hands!
       </p>
       <a
         className="app-link"
@@ -15,7 +16,7 @@ function AppHeader() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        Learn React
+        See the inner workings of The Zuck.
       </a>
     </header>
   )
