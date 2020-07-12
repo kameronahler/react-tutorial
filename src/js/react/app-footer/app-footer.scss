@@ -1,0 +1,22 @@
+.app-footer {
+  &__heading {
+    line-height: 1;
+  }
+
+  &__flex {
+    align-items: center;
+    background-color: var(--color-bg-darker);
+    display: flex;
+    min-height: var(--height-app-footer);
+    padding: var(--unit);
+  }
+
+  &__radioactive-man {
+    display: block;
+    line-height: 1;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+
+  }
+}

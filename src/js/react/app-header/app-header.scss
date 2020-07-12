@@ -1,0 +1,12 @@
+.app-header {
+  align-items: center;
+  background-color: var(--color-bg-darker);
+  display: flex;
+  min-height: var(--height-app-header);
+  padding: var(--unit);
+
+  &__heading {
+    line-height: 1;
+    margin: unset;
+  }
+}
