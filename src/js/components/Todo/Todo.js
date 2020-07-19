@@ -1,19 +1,21 @@
 import React from 'react';
 import TodoItem from '../TodoItem/TodoItem';
 import mockJSON from './MOCK_DATA.json';
+import './Todo.scss';
 
 function Todo() {
   const generateItems = mockJSON.map(mockObject => {
     return(
-      <TodoItem key={mockObject.id} status={mockObject.status} label={mockObject.label}/>
+      <TodoItem key={mockObject.id} completed={mockObject.completed} label={mockObject.label}/>
     )
-  })
+  });
+
   return (
     <section>
       <header>
         <h3>To Do List</h3>
       </header>
-      <ul>
+      <ul className="todo-list">
         {generateItems}
       </ul>
     </section>
