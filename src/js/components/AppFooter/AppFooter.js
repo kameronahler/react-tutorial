@@ -9,6 +9,7 @@ function AppFooter() {
           <h2 className="app-footer__heading">AppFooter</h2>
         </header>
         <p className="app-footer__radioactive-man">My eyes! The goggles do nothing!</p>
+        <img className="app-footer__radioactive-man-img" src="/img/rm.png" alt=""/>
       </section>
     </footer>
   )
