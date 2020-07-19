@@ -1,22 +1,20 @@
 import React from 'react';
-import TodoItem from '../TodoItem/TodoItem'
+import TodoItem from '../TodoItem/TodoItem';
+import mockJSON from './MOCK_DATA.json';
 
 function Todo() {
+  const generateItems = mockJSON.map(mockObject => {
+    return(
+      <TodoItem key={mockObject.id} status={mockObject.status} label={mockObject.label}/>
+    )
+  })
   return (
     <section>
       <header>
         <h3>To Do List</h3>
       </header>
       <ul>
-        <TodoItem
-          todoProps={{status: 'false', label: 'Item 1'}}
-        />
-        <TodoItem
-          todoProps={{status: 'false', label: 'Item 2'}}
-        />
-        <TodoItem
-          todoProps={{status: 'false', label: 'Item 3'}}
-        />
+        {generateItems}
       </ul>
     </section>
   )

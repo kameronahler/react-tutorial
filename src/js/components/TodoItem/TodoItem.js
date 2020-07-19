@@ -3,8 +3,8 @@ import React from 'react';
 function TodoItem(props) {
   return(
     <li>
-      <input data-check={props.todoProps.status} type="checkbox" />
-      <label>{props.todoProps.label}</label>
+      <input status={props.status} type="checkbox" />
+      <label>{props.label}</label>
     </li>
   )
 }
