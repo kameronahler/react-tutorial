@@ -11,7 +11,7 @@
   $color-bg: #18355D;
   --color-bg: #{$color-bg};
 
-  $color-bg-darker: darken($color-bg, 5%);
+  $color-bg-darker: darken($color-bg, 2%);
   --color-bg-darker: #{$color-bg-darker};
 
   --color-text: #33E026;

@@ -1,7 +1,7 @@
 import React from 'react';
-import AppFooter from '../app-footer/AppFooter';
-import AppHeader from '../app-header/AppHeader';
-import AppMain from '../app-main/AppMain';
+import AppFooter from '../AppFooter/AppFooter';
+import AppHeader from '../AppHeader/AppHeader';
+import AppMain from '../AppMain/AppMain';
 
 function App() {
   return (

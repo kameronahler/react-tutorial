@@ -1,11 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './js/react/app/App';
+import App from './js/components/App/App';
 import '../node_modules/normalize.css/normalize.css';
-import './scss/vars.scss';
-import './scss/global.scss';
-import './scss/typography.scss';
-import './scss/body.scss';
+import './scss/style.scss';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
