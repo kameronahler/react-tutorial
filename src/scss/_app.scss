@@ -1,0 +1,5 @@
+.app {
+  display: grid;
+  grid-template-rows: var(--height-app-header) 1fr var(--height-app-footer);
+  height: 100%;
+}

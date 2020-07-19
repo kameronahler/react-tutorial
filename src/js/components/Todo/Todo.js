@@ -5,12 +5,18 @@ function Todo() {
   return (
     <section>
       <header>
-        <h2>AppMain</h2>
+        <h3>To Do List</h3>
       </header>
       <ul>
-        <TodoItem />
-        <TodoItem />
-        <TodoItem />
+        <TodoItem
+          todoProps={{status: 'false', label: 'Item 1'}}
+        />
+        <TodoItem
+          todoProps={{status: 'false', label: 'Item 2'}}
+        />
+        <TodoItem
+          todoProps={{status: 'false', label: 'Item 3'}}
+        />
       </ul>
     </section>
   )
