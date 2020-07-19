@@ -1,4 +1,5 @@
 import React from 'react';
+import TodoItem from '../TodoItem/TodoItem'
 
 function Todo() {
   return (
@@ -7,18 +8,9 @@ function Todo() {
         <h2>AppMain</h2>
       </header>
       <ul>
-        <li>
-          <input type="checkbox" />
-          <label>Label text</label>
-        </li>
-        <li>
-          <input type="checkbox" />
-          <label>Label text</label>
-        </li>
-        <li>
-          <input type="checkbox" />
-          <label>Label text</label>
-        </li>
+        <TodoItem />
+        <TodoItem />
+        <TodoItem />
       </ul>
     </section>
   )
