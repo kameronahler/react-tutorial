@@ -4,9 +4,9 @@ import mockJSON from './MOCK_DATA.json';
 import './Todo.scss';
 
 function Todo() {
-  const generateItems = mockJSON.map(mockObject => {
+  const generateItems = mockJSON.map(mockData => {
     return(
-      <TodoItem key={mockObject.id} completed={mockObject.completed} label={mockObject.label}/>
+      <TodoItem key={mockData.id} completed={mockData.completed} label={mockData.label}/>
     )
   });
 

@@ -2,4 +2,9 @@
   &--completed {
     opacity: .25;
   }
+
+  &__checkbox {
+    display: inline-block;
+    margin-right: .5em;
+  }
 }
