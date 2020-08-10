@@ -18,7 +18,7 @@ function TodoItem(props) {
         onChange={ checkboxChange }
         type={ 'checkbox' }
       />{' '}
-      <label for={ props.for }> { props.label } </label>{' '}
+      <label htmlFor={ props.for }> { props.label } </label>{' '}
     </li>
   )
 }
