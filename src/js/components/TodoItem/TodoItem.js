@@ -1,19 +1,26 @@
-import React from 'react';
-import './TodoItem.scss';
+import React, { useState } from 'react'
+import './TodoItem.scss'
 
-class TodoItem extends React.Component {
-  render() {
-    return (
-      <li className={`"todo-item ${ (this.props.completed) ? "todo-item--completed" : null }`}>
-        <input
-          className={"todo-item__checkbox"}
-          type={"checkbox"}
-          defaultChecked={this.props.completed}
-        />
-        <label>{this.props.label}</label>
-      </li>
-    )
-  }
+function TodoItem(props) {
+  const [ stateChecked, setStateChecked ] = useState(props.checked);
+  const checkboxChange = e => { setStateChecked(e.currentTarget.checked) }
+
+  return (
+    <li
+      className={`"todo-item ${
+        stateChecked ? 'todo-item--completed' : null
+      }`}
+    >
+      <input
+        className={ 'todo-item__checkbox' }
+        defaultChecked={ stateChecked }
+        id={ props.for }
+        onChange={ checkboxChange }
+        type={ 'checkbox' }
+      />{' '}
+      <label for={ props.for }> { props.label } </label>{' '}
+    </li>
+  )
 }
 
 export default TodoItem

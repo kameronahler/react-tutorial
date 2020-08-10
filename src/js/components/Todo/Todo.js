@@ -1,12 +1,12 @@
 import React from 'react';
-import TodoItemFunction from '../TodoItemFunction/TodoItemFunction';
+import TodoItem from '../TodoItem/TodoItem';
 import mockJSON from './MOCK_DATA.json';
 import './Todo.scss';
 
 function Todo() {
   const generateItems = mockJSON.map(mockData => {
     return(
-      <TodoItemFunction key={mockData.id} checked={mockData.completed} label={mockData.label}/>
+      <TodoItem key={mockData.id} checked={mockData.completed} for={`todo-item-${mockData.id}`} label={mockData.label}/>
     )
   });
 
