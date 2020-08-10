@@ -4,11 +4,25 @@ import mockJSON from './MOCK_DATA.json';
 import './Todo.scss';
 
 function Todo() {
-  const generateItems = mockJSON.map(mockData => {
+  let incompleteItems = [];
+  let completeItems = [];
+  let allItems = mockJSON.map(object => {
     return(
-      <TodoItem key={mockData.id} checked={mockData.completed} for={`todo-item-${mockData.id}`} label={mockData.label}/>
+      <TodoItem key={object.id} checked={object.completed} for={`todo-item-${object.id}`} label={object.label}/>
     )
   });
+
+  const delineateItems = () => {
+    allItems.forEach( item => {
+      if (item.props.checked) {
+        completeItems.push(item);
+      } else {
+        incompleteItems.push(item);
+      }
+    })
+  };
+
+  delineateItems();
 
   return (
     <section>
@@ -16,7 +30,7 @@ function Todo() {
         <h3>To Do List</h3>
       </header>
       <ul className="todo-list">
-        {generateItems}
+        {incompleteItems}
       </ul>
     </section>
   )
