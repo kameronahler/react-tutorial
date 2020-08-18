@@ -1,18 +1,15 @@
 :root {
   $unit: 1rem;
-  --unit: #{$unit};
-
-  $height-app-header: 4 * $unit;
-  --height-app-header: #{$height-app-header};
-
-  $height-app-footer: $height-app-header;
-  --height-app-footer: #{$height-app-footer};
-
   $color-bg: #18355D;
-  --color-bg: #{$color-bg};
-
   $color-bg-darker: darken($color-bg, 2%);
-  --color-bg-darker: #{$color-bg-darker};
+  $color-text: #33E026;
+  $height-app-header: 4 * $unit;
+  $height-app-footer: $height-app-header;
 
-  --color-text: #33E026;
+  --unit: #{$unit};
+  --height-app-header: #{$height-app-header};
+  --height-app-footer: #{$height-app-footer};
+  --color-bg: #{$color-bg};
+  --color-bg-darker: #{$color-bg-darker};
+  --color-text: #{$color-text};
 }
