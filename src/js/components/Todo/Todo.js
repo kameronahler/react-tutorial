@@ -1,39 +1,33 @@
-import React from 'react';
-import TodoItem from '../TodoItem/TodoItem';
-import TodoFilter from '../TodoFilter/TodoFilter';
-import mockJSON from './MOCK_DATA.json';
-import './Todo.scss';
+import React, { useState } from 'react';
+import TodoFilterButton from '../TodoFilterButton/TodoFilterButton';
+import TodoList from '../TodoList/TodoList';
 
 export default function Todo() {
-  let incompleteItems = [];
-  let completeItems = [];
-  let allItems = mockJSON.map(object => {
-    return(
-      <TodoItem key={object.id} checked={object.completed} for={`todo-item-${object.id}`} label={object.label}/>
-    )
-  });
+  const [ viewing, setViewing ] = useState("incomplete")
+  const updateViewing = () => {
+    if ( viewing === 'complete' ) {
+      setViewing('incomplete')
+    } else {
+      setViewing('complete')
+    }
+  }
 
-  const delineateItems = () => {
-    allItems.forEach( item => {
-      if (item.props.checked) {
-        completeItems.push(item);
-      } else {
-        incompleteItems.push(item);
-      }
-    })
-  };
-
-  delineateItems();
+  let whichButton;
+  if ( viewing === "incomplete" ) {
+    whichButton = <TodoFilterButton title="Show completed" classes="button--primary" action={ updateViewing } />
+  } else {
+    whichButton = <TodoFilterButton title="Hide completed" classes="button--primary" action={ updateViewing } />
+  }
 
   return (
     <section>
       <header>
         <h3>To Do List</h3>
       </header>
-      <TodoFilter />
-      <ul className="todo-list">
-        {incompleteItems}
-      </ul>
+
+      <div>{ whichButton }</div>
+
+      <TodoList viewing={ viewing } />
     </section>
   )
 }
