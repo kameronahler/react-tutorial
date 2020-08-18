@@ -3,7 +3,7 @@ import TodoItem from '../TodoItem/TodoItem';
 import mockJSON from './MOCK_DATA.json';
 import './Todo.scss';
 
-function Todo() {
+export default function Todo() {
   let incompleteItems = [];
   let completeItems = [];
   let allItems = mockJSON.map(object => {
@@ -35,5 +35,3 @@ function Todo() {
     </section>
   )
 }
-
-export default Todo

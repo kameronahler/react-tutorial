@@ -1,7 +1,7 @@
 import React from 'react';
 import './AppFooter.scss';
 
-function AppFooter() {
+export default function AppFooter() {
   return(
     <footer className="app-footer">
       <section className="app-footer__flex">
@@ -14,5 +14,3 @@ function AppFooter() {
     </footer>
   )
 }
-
-export default AppFooter

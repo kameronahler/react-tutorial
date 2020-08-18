@@ -3,7 +3,7 @@ import AppFooter from '../AppFooter/AppFooter';
 import AppHeader from '../AppHeader/AppHeader';
 import AppMain from '../AppMain/AppMain';
 
-function App() {
+export default function App() {
   return (
     <div className="app">
       <AppHeader />
@@ -12,5 +12,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

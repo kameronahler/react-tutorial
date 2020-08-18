@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './TodoItem.scss'
 
-function TodoItem(props) {
+export default function TodoItem(props) {
   const [ stateChecked, setStateChecked ] = useState(props.checked);
   const checkboxChange = e => { setStateChecked(e.currentTarget.checked) }
 
@@ -22,5 +22,3 @@ function TodoItem(props) {
     </li>
   )
 }
-
-export default TodoItem

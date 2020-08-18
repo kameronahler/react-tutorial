@@ -2,7 +2,7 @@ import React from 'react';
 import './AppMain.scss';
 import Todo from '../Todo/Todo';
 
-function AppMain() {
+export default function AppMain() {
   return (
     <main className="app-main">
       <header>
@@ -12,5 +12,3 @@ function AppMain() {
     </main>
   )
 }
-
-export default AppMain
