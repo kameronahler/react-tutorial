@@ -1,5 +1,6 @@
 import React from 'react';
 import TodoItem from '../TodoItem/TodoItem';
+import TodoFilter from '../TodoFilter/TodoFilter';
 import mockJSON from './MOCK_DATA.json';
 import './Todo.scss';
 
@@ -29,6 +30,7 @@ export default function Todo() {
       <header>
         <h3>To Do List</h3>
       </header>
+      <TodoFilter />
       <ul className="todo-list">
         {incompleteItems}
       </ul>
