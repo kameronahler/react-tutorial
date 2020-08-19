@@ -1,6 +1,6 @@
 import React from 'react';
 import './AppMain.scss';
-import Todo from '../Todo/Todo';
+import TodoList from '../TodoList/TodoList';
 
 export default function AppMain() {
   return (
@@ -8,7 +8,7 @@ export default function AppMain() {
       <header>
         <h1>AppMain</h1>
       </header>
-      <Todo />
+      <TodoList />
     </main>
   )
 }
