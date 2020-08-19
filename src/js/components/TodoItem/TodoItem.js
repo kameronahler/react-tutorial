@@ -8,7 +8,7 @@ export default function TodoItem(props) {
   return (
     <li
       className={`"todo-item ${
-        checked ? 'todo-item--completed' : null
+        checked ? 'todo-item--completed' : ''
       }`}
     >
       <input

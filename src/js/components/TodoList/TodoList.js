@@ -1,5 +1,6 @@
 import React from 'react'
 import mockJSON from '../../json/MOCK_DATA.json';
+import TodoForm from '../TodoForm/TodoForm';
 import TodoItem from '../TodoItem/TodoItem';
 import './TodoList.scss';
 
@@ -18,8 +19,11 @@ export default function TodoList( props ) {
   }
 
   return (
-    <ul className="todo-list">
-      { currentItems }
-    </ul>
+    <>
+      <TodoForm />
+      <ul id="todo-list" className="todo-list">
+        { currentItems }
+      </ul>
+    </>
   )
 }
